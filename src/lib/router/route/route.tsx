@@ -16,10 +16,15 @@ const route = createBrowserRouter([
         element: <IntroducePage />,
       },
 
-      // {
-      //   path: ROUTE_PATH.COMMUNITY,
-      //   element: <CommunityPage />,
-      // },
+      {
+        path: ROUTE_PATH.MAP,
+        element: <IntroducePage />,
+      },
+
+      {
+        path: ROUTE_PATH.PROGRAM,
+        element: <IntroducePage />,
+      },
     ],
   },
 ]);

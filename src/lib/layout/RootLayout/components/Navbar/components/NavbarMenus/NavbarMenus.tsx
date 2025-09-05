@@ -1,24 +1,24 @@
-import { Link } from "react-router";
+import { ROUTE_PATH } from "@lib/constants";
 
 import { NavbarMenusItems } from "./components";
-
-const menuItemStyle = "grow-1 h-full flex justify-center items-center font-[600] text-[1.4rem] text-black";
 
 const NavbarMenus = () => {
   return (
     <ul className="w-full h-[6rem] flex border-gray border-b-[0.1rem]">
       <NavbarMenusItems
-        to="/"
+        to={ROUTE_PATH.INTRODUCE}
         title="회사소개"
       />
 
-      <li className={menuItemStyle}>
-        <Link to="/">프로그램 소개</Link>
-      </li>
+      <NavbarMenusItems
+        to={ROUTE_PATH.PROGRAM}
+        title="프로그램 소개"
+      />
 
-      <li className={menuItemStyle}>
-        <Link to="/">오시는 길</Link>
-      </li>
+      <NavbarMenusItems
+        to={ROUTE_PATH.MAP}
+        title="오시는 길"
+      />
     </ul>
   );
 };
