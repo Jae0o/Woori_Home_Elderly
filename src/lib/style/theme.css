@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color */
+  --color-black: #323133;
+  --color-light_black: #434a54;
+
+  --color-red: #da4453;
+  --color-light_red: #ed5565;
+
+  --color-yellow: #ffce54;
+
+  --color-green: #a0d468;
+  --color-dark_green: #8cc152;
+
+  --color-white: #fafafa;
+  --color-light_white: #e6e9ed;
+
+  --color-gray: #ccd1d9;
+  --color-dark_gray: #656d78;
+
+  --color-transparent_10: #23232310;
+  --color-transparent_30: #23232330;
+  --color-transparent_50: #23232350;
+  --color-transparent_70: #23232370;
+  --color-transparent_90: #23232390;
+
+  /* Font */
+  --font-pretendard:
+    "Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue",
+    "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+
+  /* Transition */
+  --transition-normal: 0.3s;
+
+  /* Opacity */
+  --opacity-low: 0.3;
+  --opacity-normal: 0.5;
+  --opacity-high: 0.7;
+
+  /* z-index */
+  --z-index-modal: 500;
+
+  /* Shadow */
+  --shadow-normal: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+
+  /* Screen */
+  --breakpoint-mobile: 640px;
+  --breakpoint-tablet: 1024px;
+}
