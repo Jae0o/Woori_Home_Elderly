@@ -2,7 +2,7 @@ import { Introduce } from "./components";
 
 const IntroducePage = () => {
   return (
-    <section className="w-full h-full flex flex-col">
+    <section className="w-full h-full p-[2rem] flex flex-col">
       <Introduce />
     </section>
   );

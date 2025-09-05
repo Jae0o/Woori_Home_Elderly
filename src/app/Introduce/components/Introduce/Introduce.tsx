@@ -4,7 +4,7 @@ const normal_text = "w-full max-w-[50rem] text-[1.8rem] font-[500]";
 
 const Introduce = () => {
   return (
-    <article className="w-full p-[2rem] py-[10rem] flex flex-col items-center justify-center gap-[3.2rem] break-keep text-center">
+    <article className="w-full py-[10rem] flex flex-col items-center justify-center gap-[3.2rem] break-keep text-center">
       <h1 className="text-[3.2rem] font-[700]">
         <strong className="text-primary">우리</strong>재가노인복지센터
       </h1>
