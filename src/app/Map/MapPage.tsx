@@ -7,7 +7,7 @@ const MapPage = () => {
   return (
     <section className="w-full h-full flex flex-col">
       <article className="w-full grow-1 p-[2rem] flex flex-col gap-[2rem] items-center justify-center">
-        <div className="w-full h-[40rem] border-[0.1rem] border-gray rounded-[1rem] overflow-hidden">
+        <div className="w-full max-w-[80rem] h-[40rem] border-[0.1rem] border-gray rounded-[1rem] overflow-hidden">
           <Map
             center={COMPANY_INFO.MAP_DATA}
             style={{ width: "100%", height: "100%" }}
