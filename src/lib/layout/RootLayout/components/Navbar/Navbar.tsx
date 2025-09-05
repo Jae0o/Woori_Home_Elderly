@@ -19,7 +19,7 @@ const Navbar = () => {
         <span
           className={twMerge(
             "grow-1 h-full px-[4rem] flex flex-col justify-center items-end font-[500] text-[1.6rem] text-black",
-            "mobile:hidden",
+            "max-mobile:hidden",
           )}
         >
           <p className="flex items-center gap-[0.6rem]">
