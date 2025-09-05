@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { IntroduceImage } from "@lib/assets";
-import { Footer } from "@lib/components";
+import { Footer, LoadingSpinner } from "@lib/components";
 
 import { Introduce } from "./components";
 
@@ -11,7 +11,9 @@ const IntroducePage = () => {
   if (isLoading) {
     return (
       <section className="w-full h-full flex flex-col items-center justify-center">
-        <div className="w-full grow-1">dasfsdf </div>
+        <div className="w-full grow-1 flex items-center justify-center">
+          <LoadingSpinner size="6rem" />
+        </div>
 
         <Footer />
         <img

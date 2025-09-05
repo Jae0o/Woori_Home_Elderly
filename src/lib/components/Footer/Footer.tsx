@@ -44,7 +44,7 @@ const Footer = () => {
         <p>주소 : {COMPANY_INFO.ADDRESS}</p>
       </span>
 
-      <p className="mt-[2.8rem] text-wrap break-keep">COPYRIGHT © 우리재가노인복지센터.com All Rights RESERVED</p>
+      <p className="mt-[3rem] text-wrap break-keep">COPYRIGHT © 우리재가노인복지센터.com All Rights RESERVED</p>
     </footer>
   );
 };

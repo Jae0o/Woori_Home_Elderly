@@ -50,4 +50,29 @@
   /* Screen */
   --breakpoint-mobile: 640px;
   --breakpoint-tablet: 1024px;
+
+  /* Animation */
+
+  --animation-skeleton: skeleton 2s infinite linear;
+  --animation-loading-spinner: loading_spinner 1s infinite ease;
+}
+
+/* Keyframes */
+@keyframes skeleton {
+  0% {
+    transform: translateX(-100%);
+  }
+  50%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes loading_spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
