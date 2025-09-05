@@ -1,5 +1,13 @@
+import { RouterProvider } from "react-router";
+
+import { route } from "@lib/router";
+
 function App() {
-  return <main className="w-full h-full flex items-center justify-center">배포 테스트용 입니다. 듀규듀규</main>;
+  return (
+    <main className="w-full h-full flex items-center justify-center">
+      <RouterProvider router={route} />
+    </main>
+  );
 }
 
 export default App;
