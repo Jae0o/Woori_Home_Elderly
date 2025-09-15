@@ -13,7 +13,7 @@ const NavbarMenusItems = ({ to, title }: NavbarMenusItemsProps) => {
   return (
     <li
       className={twMerge(
-        "grow-1 h-full flex justify-center items-center font-[600] text-[1.6rem] text-black tracking-[0.12rem]",
+        "flex-1 basis-0 min-w-[14rem] h-full flex justify-center items-center font-[600] text-[1.6rem] text-black tracking-[0.12rem]",
         isActive && "bg-gray text-white font-[700]",
       )}
     >
