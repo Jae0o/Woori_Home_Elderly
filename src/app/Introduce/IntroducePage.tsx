@@ -1,29 +1,21 @@
-import { useState } from "react";
-
 import { IntroduceImage } from "@lib/assets";
 import { ArticleTitle, Footer, LoadingSpinner } from "@lib/components";
+import { useImagePreload } from "@lib/hooks";
 
 import { Directions, Introduce } from "./components";
 
 import { motion } from "motion/react";
 
 const IntroducePage = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const { isLoaded } = useImagePreload(IntroduceImage);
 
-  if (isLoading) {
+  if (!isLoaded) {
     return (
       <section className="w-full h-full flex flex-col items-center justify-center">
         <div className="w-full grow-1 flex items-center justify-center">
           <LoadingSpinner size="6rem" />
         </div>
-
         <Footer />
-        <img
-          className="hidden"
-          src={IntroduceImage}
-          alt="introduce"
-          onLoad={() => setIsLoading(false)}
-        />
       </section>
     );
   }
