@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 import { IntroduceImage } from "@lib/assets";
-import { Footer, LoadingSpinner } from "@lib/components";
+import { ArticleTitle, Footer, LoadingSpinner } from "@lib/components";
 
-import { Introduce } from "./components";
+import { Directions, Introduce } from "./components";
 
 import { motion } from "motion/react";
 
@@ -31,6 +31,11 @@ const IntroducePage = () => {
   return (
     <section className="w-full flex flex-col">
       <div className="w-full p-[2rem] py-[10rem] flex flex-col items-center">
+        <ArticleTitle
+          title="센터 소개"
+          iconClassName="fill-primary"
+        />
+
         <motion.img
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -43,7 +48,9 @@ const IntroducePage = () => {
         <Introduce />
       </div>
 
-      <div className="w-full p-[2rem] py-[10rem] flex flex-col items-center"></div>
+      <div className="w-full p-[2rem] py-[10rem] flex flex-col items-center">
+        <Directions />
+      </div>
 
       <Footer />
     </section>
