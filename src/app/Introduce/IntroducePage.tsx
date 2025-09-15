@@ -5,6 +5,8 @@ import { Footer, LoadingSpinner } from "@lib/components";
 
 import { Introduce } from "./components";
 
+import { motion } from "motion/react";
+
 const IntroducePage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -29,7 +31,10 @@ const IntroducePage = () => {
   return (
     <section className="w-full flex flex-col">
       <div className="w-full p-[2rem] py-[10rem] flex flex-col items-center">
-        <img
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2 }}
           className="w-full max-w-[100rem]"
           src={IntroduceImage}
           alt="introduce"
@@ -37,6 +42,8 @@ const IntroducePage = () => {
 
         <Introduce />
       </div>
+
+      <div className="w-full p-[2rem] py-[10rem] flex flex-col items-center"></div>
 
       <Footer />
     </section>
