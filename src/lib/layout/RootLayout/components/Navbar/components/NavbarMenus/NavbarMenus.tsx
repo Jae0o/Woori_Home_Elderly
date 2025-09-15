@@ -19,6 +19,11 @@ const NavbarMenus = () => {
         to={ROUTE_PATH.COST_AND_CONTACT}
         title="비용 & 상담신청"
       />
+
+      <NavbarMenusItems
+        to={ROUTE_PATH.SPONSOR_AND_VOLUNTEER}
+        title="후원 & 자원봉사"
+      />
     </ul>
   );
 };
