@@ -40,7 +40,7 @@ const IntroducePage = () => {
         <Introduce />
       </div>
 
-      <div className="w-full p-[2rem] py-[10rem] flex flex-col items-center">
+      <div className="w-full p-[2rem] pb-[20rem] flex flex-col items-center">
         <Directions />
       </div>
 
