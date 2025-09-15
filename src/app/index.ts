@@ -1,2 +1,3 @@
 export { default as IntroducePage } from "./Introduce/IntroducePage";
-export { default as MapPage } from "./Map/MapPage";
+export { default as CostAndContactPage } from "./CostAndContact/CostAndContactPage";
+export { default as ServicePage } from "./Service/ServicePage";

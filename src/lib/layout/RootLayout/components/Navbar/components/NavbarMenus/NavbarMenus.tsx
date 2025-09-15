@@ -10,14 +10,14 @@ const NavbarMenus = () => {
         title="센터 소개"
       />
 
-      {/* <NavbarMenusItems
-        to={ROUTE_PATH.PROGRAM}
-        title="프로그램 소개"
-      /> */}
+      <NavbarMenusItems
+        to={ROUTE_PATH.SERVICE}
+        title="서비스 안내"
+      />
 
       <NavbarMenusItems
-        to={ROUTE_PATH.MAP}
-        title="오시는 길"
+        to={ROUTE_PATH.COST_AND_CONTACT}
+        title="비용 & 상담신청"
       />
     </ul>
   );

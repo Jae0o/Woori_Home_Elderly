@@ -1,7 +1,7 @@
 const ROUTE_PATH = {
   INTRODUCE: "/",
-  MAP: "/map",
-  PROGRAM: "/program",
+  SERVICE: "/service",
+  COST_AND_CONTACT: "/cost-and-contact",
 } as const;
 
 export default ROUTE_PATH;
