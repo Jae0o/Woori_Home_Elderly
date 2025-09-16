@@ -10,7 +10,7 @@ import { NavbarMenus } from "./components";
 const Navbar = () => {
   return (
     <header className="w-full flex flex-col">
-      <div className="w-full h-[10rem] flex items-center border-b-[0.1rem] border-b-gray">
+      <div className="w-full h-[10rem] flex items-center border-b-[0.1rem] border-b-gray bg-primary">
         <img
           className="h-full object-contain"
           src={BannerImage}
