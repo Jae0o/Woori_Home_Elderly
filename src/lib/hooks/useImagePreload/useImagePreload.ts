@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useImagePreload = (imageSrc: string) => {
+const useImagePreload = (imageSrc: string) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(false);
 
@@ -29,3 +29,5 @@ export const useImagePreload = (imageSrc: string) => {
 
   return { isLoaded, error };
 };
+
+export default useImagePreload;
