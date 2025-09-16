@@ -1,5 +1,7 @@
+import { PrePareModal } from "@lib/components";
+
 const CostAndContactPage = () => {
-  return <div>CostAndContactPage</div>;
+  return <PrePareModal />;
 };
 
 export default CostAndContactPage;

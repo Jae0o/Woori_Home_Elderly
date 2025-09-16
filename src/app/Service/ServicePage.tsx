@@ -1,5 +1,7 @@
+import { PrePareModal } from "@lib/components";
+
 const ServicePage = () => {
-  return <div>ServicePage</div>;
+  return <PrePareModal />;
 };
 
 export default ServicePage;

@@ -1,5 +1,7 @@
+import { PrePareModal } from "@lib/components";
+
 const SponsorAndVolunteerPage = () => {
-  return <div>SponsorAndVolunteerPage</div>;
+  return <PrePareModal />;
 };
 
 export default SponsorAndVolunteerPage;
