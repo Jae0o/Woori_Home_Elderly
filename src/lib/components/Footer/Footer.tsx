@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer
       className={twMerge(
-        "w-full p-[2rem] py-[5.6rem] flex flex-col items-center justify-center gap-[1rem] bg-dark_gray",
+        "w-full p-[2rem] py-[5.6rem] flex flex-col items-center justify-center gap-[1rem] bg-dark_primary",
         "max-mobile:gap-[0.4rem]",
         fontStyle,
       )}

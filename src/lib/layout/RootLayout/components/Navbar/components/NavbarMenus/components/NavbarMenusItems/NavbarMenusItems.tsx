@@ -14,7 +14,7 @@ const NavbarMenusItems = ({ to, title }: NavbarMenusItemsProps) => {
     <li
       className={twMerge(
         "flex-1 basis-0 min-w-[14rem] h-full flex justify-center items-center font-[600] text-[1.6rem] text-black tracking-[0.12rem]",
-        isActive && "bg-gray text-white font-[700]",
+        isActive && "bg-dark_primary text-white font-[700]",
       )}
     >
       <Link to={to}>{title}</Link>

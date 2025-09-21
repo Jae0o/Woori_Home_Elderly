@@ -4,7 +4,7 @@ import { NavbarMenusItems } from "./components";
 
 const NavbarMenus = () => {
   return (
-    <ul className="w-full h-[6rem] flex border-gray border-b-[0.1rem] overflow-x-auto">
+    <ul className="w-full h-[5rem] flex border-b-dark_primary border-b-[0.1rem] overflow-x-auto">
       <NavbarMenusItems
         to={ROUTE_PATH.INTRODUCE}
         title="센터 소개"
