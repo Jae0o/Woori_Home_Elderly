@@ -1,7 +1,7 @@
 import { useKakaoLoader } from "react-kakao-maps-sdk";
 import { Outlet } from "react-router";
 
-import { Navbar } from "./components";
+import { Navbar } from "@lib/layout";
 
 const KAKAO_MAP_API_KEY = import.meta.env.VITE_KAKAO_MAP_API_KEY;
 
