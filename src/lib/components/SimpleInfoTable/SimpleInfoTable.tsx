@@ -17,7 +17,7 @@ const SimpleInfoTable = ({
       </colgroup>
 
       <tbody className="w-full">
-        {data.map(({ label, value }, index) => (
+        {data.map(({ label, value }) => (
           <tr
             key={label}
             className="w-full border-b-[0.1rem] border-b-gray-200 last:border-b-0"

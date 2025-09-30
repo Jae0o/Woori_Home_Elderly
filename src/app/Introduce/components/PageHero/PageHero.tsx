@@ -2,7 +2,7 @@ import type { PageHeroProps } from "./PageHero.type";
 
 import { motion } from "motion/react";
 
-const PageHero = ({ title, subtitle, backgroundImage, height = "60vh" }: PageHeroProps) => {
+const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
   return (
     <section className="w-full flex flex-col items-center justify-center py-[4rem] px-[2rem]">
       {backgroundImage && (
