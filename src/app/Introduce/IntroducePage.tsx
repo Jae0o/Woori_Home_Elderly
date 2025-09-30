@@ -1,6 +1,6 @@
 import { IntroduceImage } from "@lib/assets";
 import { ArticleTitle, Footer, LoadingSpinner } from "@lib/components";
-import { useImagePreload } from "@lib/hooks";
+import { useImagePreload, usePageTransition } from "@lib/hooks";
 
 import { Directions, Introduce } from "./components";
 
@@ -8,11 +8,12 @@ import { motion } from "motion/react";
 
 const IntroducePage = () => {
   const { isLoaded } = useImagePreload(IntroduceImage);
+  const { pageVariants, pageTransition } = usePageTransition();
 
   if (!isLoaded) {
     return (
-      <section className="w-full h-full flex flex-col items-center justify-center">
-        <div className="w-full grow-1 flex items-center justify-center">
+      <section className="min-h-screen w-full flex flex-col">
+        <div className="flex-1 w-full flex items-center justify-center">
           <LoadingSpinner size="6rem" />
         </div>
         <Footer />
@@ -21,7 +22,14 @@ const IntroducePage = () => {
   }
 
   return (
-    <section className="w-full flex flex-col">
+    <motion.section
+      className="w-full flex flex-col"
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <div className="w-full p-[2rem] py-[10rem] flex flex-col items-center">
         <ArticleTitle
           title="센터 소개"
@@ -45,7 +53,7 @@ const IntroducePage = () => {
       </div>
 
       <Footer />
-    </section>
+    </motion.section>
   );
 };
 

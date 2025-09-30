@@ -8,7 +8,7 @@ const SimpleInfoTable = ({
 }: SimpleInfoTableProps) => {
   return (
     <table
-      className="w-full"
+      className="w-full rounded-[0.8rem] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
       style={{ maxWidth: tableMaxWidth }}
     >
       <colgroup>
@@ -17,16 +17,16 @@ const SimpleInfoTable = ({
       </colgroup>
 
       <tbody className="w-full">
-        {data.map(({ label, value }) => (
+        {data.map(({ label, value }, index) => (
           <tr
             key={label}
-            className="w-full h-[3.6rem] min-h-[3.6rem] border-[0.1rem] border-primary"
+            className="w-full border-b-[0.1rem] border-b-gray-200 last:border-b-0"
           >
-            <td className="h-full min-h-[3.6rem] flex items-center justify-center bg-primary text-white text-[1.4rem] font-[700]">
+            <td className="h-[4.4rem] bg-primary text-white text-[1.4rem] font-[600] text-center border-r-[0.1rem] border-r-white/20">
               {label}
             </td>
 
-            <td className="h-full min-h-[3.6rem] text-[1.2rem] font-[500] text-center">{value}</td>
+            <td className="h-[4.4rem] text-[1.4rem] font-[500] text-center bg-white">{value}</td>
           </tr>
         ))}
       </tbody>

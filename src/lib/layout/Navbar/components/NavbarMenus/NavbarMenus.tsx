@@ -1,30 +1,30 @@
-import { ROUTE_PATH } from "@lib/constants";
-
 import { NavbarMenusItems } from "./components";
 
 const NavbarMenus = () => {
   return (
-    <ul className="w-full h-[5rem] flex border-b-dark_primary border-b-[0.1rem] overflow-x-auto">
-      <NavbarMenusItems
-        to={ROUTE_PATH.INTRODUCE}
-        title="센터 소개"
-      />
+    <nav aria-label="주요 메뉴">
+      <ul className="w-full h-[5rem] flex border-b-primary border-b-[0.1rem] overflow-x-auto">
+        <NavbarMenusItems
+          to="/introduce"
+          title="센터 소개"
+        />
 
-      <NavbarMenusItems
-        to={ROUTE_PATH.SERVICE}
-        title="서비스 안내"
-      />
+        <NavbarMenusItems
+          to="/service"
+          title="서비스 안내"
+        />
 
-      <NavbarMenusItems
-        to={ROUTE_PATH.COST_AND_CONTACT}
-        title="비용 & 상담신청"
-      />
+        <NavbarMenusItems
+          to="/cost-and-contact"
+          title="비용 & 상담신청"
+        />
 
-      <NavbarMenusItems
-        to={ROUTE_PATH.SPONSOR_AND_VOLUNTEER}
-        title="후원 & 자원봉사"
-      />
-    </ul>
+        <NavbarMenusItems
+          to="/sponsor-and-volunteer"
+          title="후원 & 자원봉사"
+        />
+      </ul>
+    </nav>
   );
 };
 

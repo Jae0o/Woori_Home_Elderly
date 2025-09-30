@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Global Styles */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 @theme {
   /* Color */
   --color-black: #323133;
@@ -55,9 +72,11 @@
   --breakpoint-tablet: 1024px;
 
   /* Animation */
-
   --animation-skeleton: skeleton 2s infinite linear;
   --animation-loading-spinner: loading_spinner 1s infinite ease;
+  --animation-shimmer: shimmer 2s infinite;
+  --animation-fade-in: fade-in 0.3s ease-out;
+  --animation-slide-up: slide-up 0.3s ease-out;
 }
 
 /* Keyframes */
@@ -77,5 +96,34 @@
   }
   to {
     transform: rotate(1turn);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
