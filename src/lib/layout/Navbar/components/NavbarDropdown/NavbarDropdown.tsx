@@ -38,7 +38,7 @@ const NavbarDropdown = ({ menu, isOpen, onMouseEnter, onMouseLeave }: NavbarDrop
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 1 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full bg-white shadow-[var(--shadow-normal)] rounded-[0.4rem] overflow-hidden z-[var(--z-index-modal)]"
@@ -56,7 +56,7 @@ const NavbarDropdown = ({ menu, isOpen, onMouseEnter, onMouseLeave }: NavbarDrop
                       to={subItem.path}
                       className={twMerge(
                         "w-full h-[4rem] flex items-center justify-center text-[1.4rem] font-[500] text-black transition-all duration-[var(--transition-normal)] hover:bg-primary/20",
-                        isSubItemActive && "bg-primary text-white font-[600]",
+                        isSubItemActive && "bg-primary text-white font-[600] hover:bg-primary",
                       )}
                     >
                       {subItem.label}

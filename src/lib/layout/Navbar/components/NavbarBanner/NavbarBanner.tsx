@@ -9,9 +9,9 @@ const NavbarBanner = () => {
         alt=" banner"
       />
 
-      <span className="flex flex-col font-bold">
+      <span className="h-[8rem] pb-[1rem] flex flex-col justify-center font-bold">
         <p className="text-primary text-[2.2rem]">우리</p>
-        <p className="text-[1.6rem]">재가노인복지센터</p>
+        <p className="text-[1.6rem] leading-[1.6rem]">재가노인복지센터</p>
       </span>
     </div>
   );

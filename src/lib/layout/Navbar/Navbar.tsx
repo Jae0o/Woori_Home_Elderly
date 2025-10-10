@@ -15,7 +15,7 @@ const Navbar = () => {
 
         <button
           onClick={toggle}
-          className="w-[4rem] h-[4rem] flex flex-col items-center justify-center gap-[0.6rem] lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-transform hover:scale-105 active:scale-95"
+          className="w-[4rem] h-[4rem] flex flex-col items-center justify-center gap-[0.6rem] lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-transform hover:scale-105 active:scale-95 cursor-pointer"
           aria-label={isOpen ? "메뉴 닫기" : "메뉴 열기"}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
