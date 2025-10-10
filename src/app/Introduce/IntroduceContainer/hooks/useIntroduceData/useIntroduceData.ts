@@ -1,12 +1,7 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 
-import type { IntroduceData, UseIntroduceDataReturn } from "./useIntroduceData.type";
-
-const useIntroduceData = (): UseIntroduceDataReturn => {
-  const [isLoading] = useState(false);
-  const [error] = useState<Error | null>(null);
-
-  const data: IntroduceData = useMemo(
+const useIntroduceData = () => {
+  const data = useMemo(
     () => ({
       greeting: {
         title: "우리재가노인복지센터",
@@ -44,44 +39,41 @@ const useIntroduceData = (): UseIntroduceDataReturn => {
       ],
       history: [
         {
-          year: "2015",
-          month: "03",
+          year: "2025",
+          month: "09",
           description: "우리재가노인복지센터 설립",
         },
-        {
-          year: "2016",
-          month: "06",
-          description: "전주시 덕진구 이전 및 확장",
-        },
-        {
-          year: "2018",
-          month: "09",
-          description: "우수 재가센터 선정",
-        },
-        {
-          year: "2020",
-          month: "12",
-          description: "요양보호사 교육 프로그램 운영",
-        },
-        {
-          year: "2023",
-          month: "03",
-          description: "지역사회 공헌 우수기관 표창",
-        },
+        // {
+        //   year: "2016",
+        //   month: "06",
+        //   description: "전주시 덕진구 이전 및 확장",
+        // },
+        // {
+        //   year: "2018",
+        //   month: "09",
+        //   description: "우수 재가센터 선정",
+        // },
+        // {
+        //   year: "2020",
+        //   month: "12",
+        //   description: "요양보호사 교육 프로그램 운영",
+        // },
+        // {
+        //   year: "2023",
+        //   month: "03",
+        //   description: "지역사회 공헌 우수기관 표창",
+        // },
       ],
-      organizationChart: {
-        title: "조직도",
-        description: "우리재가노인복지센터의 조직 구조",
-      },
+
+      // organizationChart: {
+      //   title: "조직도",
+      //   description: "우리재가노인복지센터의 조직 구조",
+      // },
     }),
     [],
   );
 
-  return {
-    data,
-    isLoading,
-    error,
-  };
+  return data;
 };
 
 export default useIntroduceData;

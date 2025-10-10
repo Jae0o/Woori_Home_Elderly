@@ -9,9 +9,9 @@ import { CEOGreeting, CoreValuesGrid, HistoryTimeline, VisionMissionCards } from
 
 const GreetingPage = () => {
   const { isLoaded } = useImagePreload(IntroduceImage);
-  const { data, isLoading } = useIntroduceData();
+  const { greeting, vision, mission, coreValues, history } = useIntroduceData();
 
-  if (!isLoaded || isLoading) {
+  if (!isLoaded) {
     return (
       <IntroduceContainer>
         <div className="w-full h-[60vh] flex items-center justify-center">
@@ -32,7 +32,7 @@ const GreetingPage = () => {
       <Breadcrumb items={breadcrumbItems} />
 
       <PageHero
-        title={data.greeting.title}
+        title={greeting.title}
         subtitle="어르신의 행복한 노후를 위해 함께합니다"
         backgroundImage={IntroduceImage}
         height="50vh"
@@ -40,25 +40,25 @@ const GreetingPage = () => {
 
       <ContentSection>
         <CEOGreeting
-          ceoName={data.greeting.ceoName}
-          messages={data.greeting.messages}
-          closingMessage={data.greeting.closingMessage}
+          ceoName={greeting.ceoName}
+          messages={greeting.messages}
+          closingMessage={greeting.closingMessage}
         />
       </ContentSection>
 
       <ContentSection title="비전 & 미션">
         <VisionMissionCards
-          vision={data.vision}
-          mission={data.mission}
+          vision={vision}
+          mission={mission}
         />
       </ContentSection>
 
       <ContentSection title="핵심가치">
-        <CoreValuesGrid coreValues={data.coreValues} />
+        <CoreValuesGrid coreValues={coreValues} />
       </ContentSection>
 
       <ContentSection title="센터 연혁">
-        <HistoryTimeline history={data.history} />
+        <HistoryTimeline history={history} />
       </ContentSection>
     </IntroduceContainer>
   );
