@@ -1,19 +1,10 @@
-import { useState } from "react";
-
 import { MENU_DATA } from "@lib/constants";
 
 import { NavbarDropdown } from "../";
+import { useActiveMenu } from "./hooks";
 
 const NavbarMenusContainer = () => {
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
-
-  const handleMouseEnter = (menuLabel: string) => {
-    setActiveMenu(menuLabel);
-  };
-
-  const handleMouseLeave = () => {
-    setActiveMenu(null);
-  };
+  const { activeMenu, handleMouseEnter, handleMouseLeave } = useActiveMenu();
 
   return (
     <nav className="w-full h-[5rem] border-b-primary border-b-[0.1rem] hidden lg:block">
