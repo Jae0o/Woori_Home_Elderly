@@ -3,26 +3,18 @@ import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { COMPANY_INFO, ROUTE_PATH } from "@lib/constants";
 
 import { Breadcrumb, ContentSection, IntroduceContainer, PageHero } from "../components";
-import { ContactInfo, OperatingHours, TransportationGuide } from "./components";
+import { ContactInfo } from "./components";
 
-const transportInfo = [
-  {
-    type: "지하철",
-    details: "전주역에서 하차 후 시내버스 이용 (약 20분 소요)",
-  },
-  {
-    type: "버스",
-    details: "119번, 165번, 211번 버스 이용 - 붓내마을 정류장 하차 (도보 3분)",
-  },
-  {
-    type: "자가용",
-    details: "전주IC에서 약 15분, 전주시청에서 약 10분 거리",
-  },
-  {
-    type: "주차안내",
-    details: "건물 내 무료 주차 가능 (방문 시 주차권 발급)",
-  },
-];
+// const TRANSPORTATION_INFO = [
+//   {
+//     type: "버스",
+//     details: "119번, 165번, 211번 버스 이용 - 붓내마을 정류장 하차 (도보 3분)",
+//   },
+//   {
+//     type: "자가용",
+//     details: "전주IC에서 약 15분, 전주시청에서 약 10분 거리",
+//   },
+// ];
 
 const DirectionsPage = () => {
   const breadcrumbItems = [
@@ -57,13 +49,13 @@ const DirectionsPage = () => {
         <ContactInfo />
       </ContentSection>
 
-      <ContentSection title="대중교통 이용안내">
-        <TransportationGuide transportInfo={transportInfo} />
-      </ContentSection>
+      {/* <ContentSection title="대중교통 이용안내">
+        <TransportationGuide transportInfo={TRANSPORTATION_INFO} />
+      </ContentSection> */}
 
-      <ContentSection title="운영시간">
+      {/* <ContentSection title="운영시간">
         <OperatingHours />
-      </ContentSection>
+      </ContentSection> */}
     </IntroduceContainer>
   );
 };
