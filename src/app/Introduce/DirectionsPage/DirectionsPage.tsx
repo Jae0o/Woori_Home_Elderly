@@ -2,8 +2,7 @@ import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 import { COMPANY_INFO, ROUTE_PATH } from "@lib/constants";
 
-import { IntroduceContainer } from "../IntroduceContainer";
-import { Breadcrumb, ContentSection, PageHero } from "../components";
+import { Breadcrumb, ContentSection, IntroduceContainer, PageHero } from "../components";
 import { ContactInfo, OperatingHours, TransportationGuide } from "./components";
 
 const transportInfo = [

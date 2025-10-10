@@ -3,8 +3,8 @@ import { LoadingSpinner } from "@lib/components";
 import { ROUTE_PATH } from "@lib/constants";
 import { useImagePreload } from "@lib/hooks";
 
-import { IntroduceContainer, useIntroduceData } from "../IntroduceContainer";
-import { Breadcrumb, ContentSection, PageHero } from "../components";
+import { Breadcrumb, ContentSection, IntroduceContainer, PageHero } from "../components";
+import { useIntroduceData } from "../components/IntroduceContainer";
 import { CEOGreeting, CoreValuesGrid, HistoryTimeline, VisionMissionCards } from "./components";
 
 const GreetingPage = () => {
