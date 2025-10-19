@@ -4,7 +4,7 @@ const COMPANY_INFO = {
   EMAIL: "yetni@daum.net",
   ADDRESS: "전주시 덕진구 붓내1길 23",
 
-  MAP_DATA: { lat: 35.8646875, lng: 127.124375 },
+  MAP_DATA: { lat: 35.8645397872741, lng: 127.124073973369 },
 } as const;
 
 export default COMPANY_INFO;
