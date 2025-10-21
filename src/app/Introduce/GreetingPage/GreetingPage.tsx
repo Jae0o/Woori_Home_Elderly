@@ -1,9 +1,9 @@
 import { IntroduceImage } from "@lib/assets";
-import { LoadingSpinner } from "@lib/components";
+import { Breadcrumb, ContentSection, LoadingSpinner, PageHero } from "@lib/components";
 import { ROUTE_PATH } from "@lib/constants";
 import { useImagePreload } from "@lib/hooks";
 
-import { Breadcrumb, ContentSection, IntroduceContainer, PageHero } from "../components";
+import { IntroduceContainer } from "../components";
 import { useIntroduceData } from "../components/IntroduceContainer";
 import { CEOGreeting, CoreValuesGrid, HistoryTimeline, VisionMissionCards } from "./components";
 

@@ -1,6 +1,7 @@
-import { twMerge } from "tailwind-merge";
-
+import Card from "../Card/Card";
 import type { SimpleInfoTableProps } from "./SimpleInfoTable.type";
+
+import { twMerge } from "tailwind-merge";
 
 const SimpleInfoTable = ({
   data,
@@ -49,9 +50,10 @@ const SimpleInfoTable = ({
           style={{ maxWidth: tableMaxWidth }}
         >
           {data.map(({ label, value }) => (
-            <div
+            <Card
               key={label}
-              className="w-full bg-white rounded-[1.2rem] shadow-md overflow-hidden border border-gray-200"
+              variant="default"
+              className="w-full p-0 overflow-hidden"
             >
               <div className="bg-primary text-white text-[1.4rem] max-mobile:text-[1.3rem] font-[600] text-center px-[1.6rem] py-[1rem]">
                 {label}
@@ -59,7 +61,7 @@ const SimpleInfoTable = ({
               <div className="bg-white text-[1.4rem] max-mobile:text-[1.3rem] font-[500] text-center px-[2rem] py-[1.6rem] leading-[1.7] break-keep">
                 {value}
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       )}

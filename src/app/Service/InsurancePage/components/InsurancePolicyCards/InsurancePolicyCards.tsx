@@ -1,3 +1,4 @@
+import { Card } from "@lib/components";
 import { useScrollAnimation } from "@lib/hooks";
 
 import type { InsurancePolicyCardsProps } from "./InsurancePolicyCards.type";
@@ -45,12 +46,13 @@ const InsurancePolicyCards = ({ cards }: InsurancePolicyCardsProps) => {
       {cards.map((card, index) => (
         <motion.div
           key={index}
-          className="p-[3rem] bg-white rounded-[1.2rem] border border-gray-200 shadow-md hover:shadow-lg transition-shadow"
           variants={itemVariants}
         >
-          <div className="text-[4rem] font-[700] text-primary/30 mb-[1rem]">{index + 1}</div>
-          <h3 className="text-[2rem] font-[700] text-primary mb-[1.6rem]">{card.title}</h3>
-          <p className="text-[1.6rem] leading-[1.7] text-gray-700 break-keep">{card.description}</p>
+          <Card variant="default">
+            <div className="text-[4rem] font-[700] text-primary/30 mb-[1rem]">{index + 1}</div>
+            <h3 className="text-[2rem] font-[700] text-primary mb-[1.6rem]">{card.title}</h3>
+            <p className="text-[1.6rem] leading-[1.7] text-gray-700 break-keep">{card.description}</p>
+          </Card>
         </motion.div>
       ))}
     </motion.div>

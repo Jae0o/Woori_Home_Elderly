@@ -1,8 +1,9 @@
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 
+import { Breadcrumb, ContentSection, PageHero } from "@lib/components";
 import { COMPANY_INFO, ROUTE_PATH } from "@lib/constants";
 
-import { Breadcrumb, ContentSection, IntroduceContainer, PageHero } from "../components";
+import { IntroduceContainer } from "../components";
 import { ContactInfo } from "./components";
 
 // const TRANSPORTATION_INFO = [
