@@ -9,4 +9,5 @@ export interface SimpleInfoTableProps {
   tableMaxWidth?: string | number;
   labelWidth?: string | number;
   valueWidth?: string | number;
+  enableMobileCard?: boolean;
 }

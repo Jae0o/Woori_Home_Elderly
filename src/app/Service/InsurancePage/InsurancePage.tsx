@@ -71,6 +71,7 @@ const InsurancePage = () => {
               data={gradeTable.rows}
               tableMaxWidth="100rem"
               labelWidth="12rem"
+              enableMobileCard={true}
             />
           </motion.div>
         </ContentSection>

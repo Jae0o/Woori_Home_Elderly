@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+
 import type { SimpleInfoTableProps } from "./SimpleInfoTable.type";
 
 const SimpleInfoTable = ({
@@ -5,12 +7,16 @@ const SimpleInfoTable = ({
   tableMaxWidth = "60rem",
   labelWidth = "16rem",
   valueWidth = "*",
+  enableMobileCard = false,
 }: SimpleInfoTableProps) => {
   return (
     <>
       {/* Desktop Table View */}
       <table
-        className="w-full rounded-[0.8rem] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.1)] max-mobile:hidden"
+        className={twMerge(
+          "w-full rounded-[0.8rem] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.1)]",
+          enableMobileCard && "max-mobile:hidden",
+        )}
         style={{ maxWidth: tableMaxWidth }}
       >
         <colgroup>
@@ -37,24 +43,26 @@ const SimpleInfoTable = ({
       </table>
 
       {/* Mobile Card View */}
-      <div
-        className="w-full flex flex-col gap-[1.6rem] sm:hidden"
-        style={{ maxWidth: tableMaxWidth }}
-      >
-        {data.map(({ label, value }) => (
-          <div
-            key={label}
-            className="w-full bg-white rounded-[1.2rem] shadow-md overflow-hidden border border-gray-200"
-          >
-            <div className="bg-primary text-white text-[1.4rem] max-mobile:text-[1.3rem] font-[600] text-center px-[1.6rem] py-[1rem]">
-              {label}
+      {enableMobileCard && (
+        <div
+          className="w-full flex flex-col gap-[1.6rem] sm:hidden"
+          style={{ maxWidth: tableMaxWidth }}
+        >
+          {data.map(({ label, value }) => (
+            <div
+              key={label}
+              className="w-full bg-white rounded-[1.2rem] shadow-md overflow-hidden border border-gray-200"
+            >
+              <div className="bg-primary text-white text-[1.4rem] max-mobile:text-[1.3rem] font-[600] text-center px-[1.6rem] py-[1rem]">
+                {label}
+              </div>
+              <div className="bg-white text-[1.4rem] max-mobile:text-[1.3rem] font-[500] text-center px-[2rem] py-[1.6rem] leading-[1.7] break-keep">
+                {value}
+              </div>
             </div>
-            <div className="bg-white text-[1.4rem] max-mobile:text-[1.3rem] font-[500] text-center px-[2rem] py-[1.6rem] leading-[1.7] break-keep">
-              {value}
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };
