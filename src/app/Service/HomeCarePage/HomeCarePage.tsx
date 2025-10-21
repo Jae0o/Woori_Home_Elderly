@@ -70,6 +70,7 @@ const HomeCarePage = () => {
             tableMaxWidth="100rem"
             labelWidth="20rem"
             enableMobileCard={true}
+            variant="detailed"
           />
         </ContentSection>
 
@@ -82,6 +83,7 @@ const HomeCarePage = () => {
             tableMaxWidth="100rem"
             labelWidth="20rem"
             enableMobileCard={true}
+            variant="detailed"
           />
         </ContentSection>
 
@@ -94,6 +96,7 @@ const HomeCarePage = () => {
             tableMaxWidth="100rem"
             labelWidth="20rem"
             enableMobileCard={true}
+            variant="detailed"
           />
         </ContentSection>
       </div>

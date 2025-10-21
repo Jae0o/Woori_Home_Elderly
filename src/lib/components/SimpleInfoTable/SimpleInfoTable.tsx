@@ -9,7 +9,13 @@ const SimpleInfoTable = ({
   labelWidth = "16rem",
   valueWidth = "*",
   enableMobileCard = false,
+  variant = "compact",
 }: SimpleInfoTableProps) => {
+  // Variant-based styles
+  const isDetailed = variant === "detailed";
+  const valueStyles = isDetailed
+    ? "px-[2rem] py-[1.6rem] text-[1.5rem] font-[500] text-left align-top"
+    : "px-[2rem] py-[1.2rem] text-[1.4rem] font-[500] text-center";
   return (
     <>
       {/* Desktop Table View */}
@@ -35,8 +41,8 @@ const SimpleInfoTable = ({
                 {label}
               </td>
 
-              <td className="h-auto px-[2rem] py-[1.2rem] text-[1.4rem] font-[500] text-center bg-white break-keep">
-                {value}
+              <td className={twMerge("h-auto bg-white break-keep", valueStyles)}>
+                {isDetailed ? <p className="whitespace-pre-line leading-[1.8]">{value}</p> : value}
               </td>
             </tr>
           ))}
@@ -58,8 +64,15 @@ const SimpleInfoTable = ({
               <div className="bg-primary text-white text-[1.4rem] max-mobile:text-[1.3rem] font-[600] text-center px-[1.6rem] py-[1rem]">
                 {label}
               </div>
-              <div className="bg-white text-[1.4rem] max-mobile:text-[1.3rem] font-[500] text-center px-[2rem] py-[1.6rem] leading-[1.7] break-keep">
-                {value}
+              <div
+                className={twMerge(
+                  "bg-white break-keep",
+                  isDetailed
+                    ? "text-[1.4rem] max-mobile:text-[1.3rem] font-[500] text-left px-[2rem] py-[1.6rem]"
+                    : "text-[1.4rem] max-mobile:text-[1.3rem] font-[500] text-center px-[2rem] py-[1.6rem]",
+                )}
+              >
+                {isDetailed ? <p className="whitespace-pre-line leading-[1.8]">{value}</p> : value}
               </div>
             </Card>
           ))}
