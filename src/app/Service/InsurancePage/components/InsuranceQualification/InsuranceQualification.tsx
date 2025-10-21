@@ -23,16 +23,20 @@ const InsuranceQualification = ({
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
       transition={transition}
-      className="w-full max-w-[100rem]"
+      className="w-full max-w-[100rem] px-[2rem]"
     >
-      <div className="space-y-[2rem] text-[1.6rem] leading-[1.7] text-gray-800 break-keep">
+      <div className="space-y-[2rem] text-[1.6rem] max-mobile:text-[1.4rem] leading-[1.7] text-gray-800 break-keep">
         <p>{mainDescription}</p>
         <p>{processDescription}</p>
       </div>
 
-      <div className="mt-[3rem] p-[2.4rem] bg-primary/10 rounded-[1.2rem] border-l-[0.4rem] border-primary">
-        <h3 className="text-[1.8rem] font-[700] text-primary mb-[1rem]">{applicationQualification.title}</h3>
-        <p className="text-[1.6rem] leading-[1.7] text-gray-800 break-keep">{applicationQualification.description}</p>
+      <div className="mt-[3rem] p-[2.4rem] max-mobile:p-[1.6rem] bg-primary/10 rounded-[1.2rem] border-l-[0.4rem] border-primary">
+        <h3 className="text-[1.8rem] max-mobile:text-[1.6rem] font-[700] text-primary mb-[1rem]">
+          {applicationQualification.title}
+        </h3>
+        <p className="text-[1.6rem] max-mobile:text-[1.4rem] leading-[1.7] text-gray-800 break-keep">
+          {applicationQualification.description}
+        </p>
       </div>
     </motion.div>
   );

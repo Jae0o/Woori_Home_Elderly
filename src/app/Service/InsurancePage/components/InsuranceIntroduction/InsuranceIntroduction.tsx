@@ -17,9 +17,11 @@ const InsuranceIntroduction = ({ content }: InsuranceIntroductionProps) => {
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
       transition={transition}
-      className="w-full max-w-[80rem] text-center"
+      className="w-full max-w-[80rem] text-center px-[2rem]"
     >
-      <p className="text-[1.8rem] leading-[1.8] font-[500] text-gray-800 break-keep">{content}</p>
+      <p className="text-[1.8rem] max-mobile:text-[1.6rem] leading-[1.8] max-mobile:leading-[1.9] font-[500] text-gray-800 break-keep">
+        {content}
+      </p>
     </motion.div>
   );
 };
