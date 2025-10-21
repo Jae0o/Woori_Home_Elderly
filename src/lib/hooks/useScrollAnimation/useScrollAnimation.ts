@@ -32,7 +32,7 @@ import type { UseScrollAnimationOptions, UseScrollAnimationReturn } from "./useS
  */
 const useScrollAnimation = (options: UseScrollAnimationOptions = {}): UseScrollAnimationReturn => {
   const { type = "fade", threshold = 0.2, staggerDelay = 0.1 } = options;
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
