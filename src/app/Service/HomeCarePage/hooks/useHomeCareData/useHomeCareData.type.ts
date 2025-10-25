@@ -61,6 +61,7 @@ export interface DetailedServicesData {
   serviceIntroduction: LabelValuePair[];
   cognitiveActivityService: LabelValuePair[];
   familyCareService: LabelValuePair[];
+  additionalServices: LabelValuePair[];
 }
 
 /**

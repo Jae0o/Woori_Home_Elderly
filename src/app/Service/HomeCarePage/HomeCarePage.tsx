@@ -99,6 +99,19 @@ const HomeCarePage = () => {
             variant="detailed"
           />
         </ContentSection>
+
+        <ContentSection
+          title="4) 추가 서비스"
+          maxWidth="100rem"
+        >
+          <SimpleInfoTable
+            data={detailedServices.additionalServices}
+            tableMaxWidth="100rem"
+            labelWidth="20rem"
+            enableMobileCard={true}
+            variant="detailed"
+          />
+        </ContentSection>
       </div>
     </ServiceContainer>
   );
