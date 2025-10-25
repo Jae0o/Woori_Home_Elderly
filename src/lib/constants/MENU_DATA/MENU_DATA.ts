@@ -48,10 +48,6 @@ const MENU_DATA: MenuItem[] = [
         label: "이용안내",
         path: ROUTE_PATH.COST_AND_CONTACT_GUIDE,
       },
-      {
-        label: "상담 신청",
-        path: ROUTE_PATH.COST_AND_CONTACT_CONSULT,
-      },
     ],
   },
   {
