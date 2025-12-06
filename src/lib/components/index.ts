@@ -11,3 +11,4 @@ export { PageHero } from "./PageHero";
 export type { PageHeroProps } from "./PageHero";
 export { default as ContentSection } from "./ContentSection/ContentSection";
 export type { ContentSectionProps } from "./ContentSection/ContentSection.type";
+export { SectionHeader } from "./SectionHeader";
