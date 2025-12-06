@@ -54,8 +54,33 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               <nav className="flex-1 py-[1rem]">
                 <ul className="w-full flex flex-col">
                   {MENU_DATA.map(menu => {
-                    const isActive = menu.subItems.some(subItem => pathname === subItem.path);
+                    const hasSubItems = menu.subItems.length > 0;
+                    const isActive = hasSubItems
+                      ? menu.subItems.some(subItem => pathname === subItem.path)
+                      : pathname === menu.mainPath;
                     const isSubmenuOpen = activeSubmenu === menu.label;
+
+                    // subItems가 없는 경우 단순 링크로 동작
+                    if (!hasSubItems) {
+                      return (
+                        <li
+                          key={menu.label}
+                          className="w-full border-b-[0.1rem] border-b-gray"
+                        >
+                          <Link
+                            to={menu.mainPath}
+                            onClick={handleLinkClick}
+                            className={twMerge(
+                              "w-full h-[5.6rem] px-[2rem] flex items-center text-[1.6rem] font-[600] text-black transition-all duration-[var(--transition-normal)]",
+                              isActive && "bg-primary text-white",
+                              !isActive && "hover:bg-primary/20",
+                            )}
+                          >
+                            {menu.label}
+                          </Link>
+                        </li>
+                      );
+                    }
 
                     return (
                       <li

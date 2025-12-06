@@ -7,8 +7,7 @@ import {
   HomeCarePage,
   InsurancePage,
   NotFoundPage,
-  SponsorPage,
-  VolunteerPage,
+  SponsorAndVolunteerPage,
 } from "@app/index";
 
 import { ROUTE_PATH } from "@lib/constants";
@@ -86,23 +85,8 @@ const route = createBrowserRouter([
       },
 
       {
-        path: ROUTE_PATH.SPONSOR_AND_VOLUNTEER_SPONSOR,
-        element: <SponsorPage />,
-      },
-
-      {
-        path: ROUTE_PATH.SPONSOR_AND_VOLUNTEER_VOLUNTEER,
-        element: <VolunteerPage />,
-      },
-
-      {
-        path: "/sponsor-and-volunteer",
-        element: (
-          <Navigate
-            to={ROUTE_PATH.SPONSOR_AND_VOLUNTEER_SPONSOR}
-            replace
-          />
-        ),
+        path: ROUTE_PATH.SPONSOR_AND_VOLUNTEER,
+        element: <SponsorAndVolunteerPage />,
       },
 
       {

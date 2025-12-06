@@ -6,7 +6,6 @@ export { HomeCarePage } from "./Service/HomeCarePage";
 
 export { GuidePage } from "./CostAndContact/GuidePage";
 
-export { SponsorPage } from "./SponsorAndVolunteer/SponsorPage";
-export { VolunteerPage } from "./SponsorAndVolunteer/VolunteerPage";
+export { SponsorAndVolunteerPage } from "./SponsorAndVolunteer/SponsorAndVolunteerPage";
 
 export { NotFoundPage } from "./NotFound";

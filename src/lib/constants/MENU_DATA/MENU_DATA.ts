@@ -52,17 +52,8 @@ const MENU_DATA: MenuItem[] = [
   },
   {
     label: "후원 및 자원봉사",
-    mainPath: ROUTE_PATH.SPONSOR_AND_VOLUNTEER_SPONSOR,
-    subItems: [
-      {
-        label: "후원",
-        path: ROUTE_PATH.SPONSOR_AND_VOLUNTEER_SPONSOR,
-      },
-      {
-        label: "자원봉사",
-        path: ROUTE_PATH.SPONSOR_AND_VOLUNTEER_VOLUNTEER,
-      },
-    ],
+    mainPath: ROUTE_PATH.SPONSOR_AND_VOLUNTEER,
+    subItems: [],
   },
 ];
 

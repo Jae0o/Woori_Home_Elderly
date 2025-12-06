@@ -15,7 +15,26 @@ interface NavbarDropdownProps {
 const NavbarDropdown = ({ menu, isOpen, onMouseEnter, onMouseLeave }: NavbarDropdownProps) => {
   const { pathname } = useLocation();
 
-  const isActive = menu.subItems.some(subItem => pathname === subItem.path);
+  const hasSubItems = menu.subItems.length > 0;
+  const isActive = hasSubItems ? menu.subItems.some(subItem => pathname === subItem.path) : pathname === menu.mainPath;
+
+  // subItems가 없는 경우 단순 링크로 동작
+  if (!hasSubItems) {
+    return (
+      <li className="relative flex-1 basis-0 min-w-[14rem] h-full">
+        <Link
+          to={menu.mainPath}
+          className={twMerge(
+            "w-full h-full flex justify-center items-center font-[600] text-[1.6rem] text-black tracking-[0.12rem] transition-all duration-[var(--transition-normal)]",
+            isActive && "bg-primary text-white font-[700]",
+            !isActive && "hover:bg-primary/20",
+          )}
+        >
+          {menu.label}
+        </Link>
+      </li>
+    );
+  }
 
   return (
     <li
