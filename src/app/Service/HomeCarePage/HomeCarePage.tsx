@@ -2,11 +2,11 @@ import { ServiceContainer } from "@app/Service/components";
 
 import { Breadcrumb, ContentSection, PageHero, SimpleInfoTable } from "@lib/components";
 
-import { HomeCareGuide, HomeCareIntroduction, HomeCareServiceCharge } from "./components";
+import { HomeCareGuide, HomeCareIntroduction } from "./components";
 import { useHomeCareData } from "./hooks";
 
 const HomeCarePage = () => {
-  const { introduction, guideTable, serviceChargeTable, detailedServices } = useHomeCareData();
+  const { introduction, guideTable, detailedServices } = useHomeCareData();
 
   const breadcrumbItems = [
     { label: "홈", href: "/" },
@@ -18,17 +18,6 @@ const HomeCarePage = () => {
     title: section.title,
     content: section.items.map(item => item.value),
   }));
-
-  const transformedChargeData = {
-    rows: serviceChargeTable.rows.map(row => ({
-      duration: row.구분,
-      benefit: row.급여원,
-      burden15: row.본인부담금_15,
-      burden9: row.본인부담금_9,
-      burden6: row.본인부담금_6,
-    })),
-    footerNote: serviceChargeTable.footer,
-  };
 
   return (
     <ServiceContainer>
@@ -52,13 +41,6 @@ const HomeCarePage = () => {
           maxWidth="100rem"
         >
           <HomeCareGuide guideData={transformedGuideData} />
-        </ContentSection>
-
-        <ContentSection
-          title={serviceChargeTable.title}
-          maxWidth="100rem"
-        >
-          <HomeCareServiceCharge chargeData={transformedChargeData} />
         </ContentSection>
 
         <ContentSection

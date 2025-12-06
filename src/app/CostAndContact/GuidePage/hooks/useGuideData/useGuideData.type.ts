@@ -26,9 +26,6 @@ export interface GuideData {
   // 재가복지센터 이용안내 (4 스텝)
   usageSteps: StepCardData[];
 
-  // 재가복지센터 비용안내 (4 스텝)
-  costSteps: StepCardData[];
-
   // 장기요양인정 신청안내
   applicationInfo: ApplicationInfoData[];
 

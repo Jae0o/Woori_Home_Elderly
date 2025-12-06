@@ -1,10 +1,10 @@
 import { useScrollAnimation } from "@lib/hooks";
 
-import type { HomeCareServiceChargeProps } from "./HomeCareServiceCharge.type";
+import type { CostChargeTableProps } from "./CostChargeTable.type";
 
 import { motion } from "motion/react";
 
-const HomeCareServiceCharge = ({ chargeData }: HomeCareServiceChargeProps) => {
+const CostChargeTable = ({ data }: CostChargeTableProps) => {
   const { ref, variants, transition, isInView } = useScrollAnimation({
     type: "slide",
     threshold: 0.2,
@@ -39,7 +39,7 @@ const HomeCareServiceCharge = ({ chargeData }: HomeCareServiceChargeProps) => {
             </tr>
           </thead>
           <tbody>
-            {chargeData.rows.map((row, index) => (
+            {data.rows.map((row, index) => (
               <tr
                 key={index}
                 className="bg-white border-b-[0.1rem] border-b-gray-200 last:border-b-0"
@@ -92,7 +92,7 @@ const HomeCareServiceCharge = ({ chargeData }: HomeCareServiceChargeProps) => {
             </tr>
           </thead>
           <tbody>
-            {chargeData.rows.map((row, index) => (
+            {data.rows.map((row, index) => (
               <tr
                 key={index}
                 className="bg-white border-b-[0.1rem] border-b-gray-200 last:border-b-0"
@@ -119,10 +119,10 @@ const HomeCareServiceCharge = ({ chargeData }: HomeCareServiceChargeProps) => {
       </div>
 
       <p className="text-[1.3rem] max-mobile:text-[1.2rem] text-gray-600 leading-[1.6] break-keep mt-[0.8rem]">
-        {chargeData.footerNote}
+        {data.footer}
       </p>
     </motion.div>
   );
 };
 
-export default HomeCareServiceCharge;
+export default CostChargeTable;

@@ -34,27 +34,6 @@ export interface GuideTableData {
 }
 
 /**
- * 요금 테이블 행 데이터
- */
-export interface ServiceChargeRow {
-  구분: string;
-  급여원: string;
-  본인부담금_15: string;
-  본인부담금_9: string;
-  본인부담금_6: string;
-}
-
-/**
- * 요금 테이블 데이터
- */
-export interface ServiceChargeTableData {
-  title: string;
-  columns: string[];
-  rows: ServiceChargeRow[];
-  footer: string;
-}
-
-/**
  * 방문요양 서비스 상세 데이터 (SimpleInfoTable 형식)
  */
 export interface DetailedServicesData {
@@ -70,6 +49,5 @@ export interface DetailedServicesData {
 export interface HomeCareData {
   introduction: IntroductionSection;
   guideTable: GuideTableData;
-  serviceChargeTable: ServiceChargeTableData;
   detailedServices: DetailedServicesData;
 }

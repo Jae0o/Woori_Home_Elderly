@@ -4,7 +4,7 @@ import { ApplicationInfoSection, GradeProcessTimeline, GuideStepCards } from "./
 import { useGuideData } from "./hooks";
 
 const GuidePage = () => {
-  const { usageSteps, costSteps, applicationInfo, gradeProcess, gradeResult } = useGuideData();
+  const { usageSteps, applicationInfo, gradeProcess, gradeResult } = useGuideData();
 
   const breadcrumbItems = [
     { label: "홈", href: "/" },
@@ -28,13 +28,6 @@ const GuidePage = () => {
             maxWidth="100rem"
           >
             <GuideStepCards steps={usageSteps} />
-          </ContentSection>
-
-          <ContentSection
-            title="재가복지센터 비용안내"
-            maxWidth="100rem"
-          >
-            <GuideStepCards steps={costSteps} />
           </ContentSection>
 
           <ContentSection

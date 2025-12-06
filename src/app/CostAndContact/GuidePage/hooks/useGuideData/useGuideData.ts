@@ -6,7 +6,7 @@ import type { GuideData } from "./useGuideData.type";
  */
 const useGuideData = (): GuideData => {
   return {
-    // 재가복지센터 이용안내 (Prototype 1)
+    // 재가복지센터 이용안내
     usageSteps: [
       {
         step: "Step1",
@@ -26,31 +26,7 @@ const useGuideData = (): GuideData => {
       },
     ],
 
-    // 재가복지센터 비용안내 (Prototype 2)
-    costSteps: [
-      {
-        step: "Step1",
-        title: "장기요양인정 신청\n및 방문신청",
-        organization: "국민건강보험공단",
-      },
-      {
-        step: "Step2",
-        title: "장기요양인정 및\n장기요양등급판정",
-        organization: "등급판정위원회",
-      },
-      {
-        step: "Step3",
-        title: "장기요양인정서 표준장기요양\n이용계획서 송부",
-        organization: "국민건강보험공단",
-      },
-      {
-        step: "Step4",
-        title: "장기요양급여 이용계획\n및 장기요양 급여제공",
-        organization: "장기요양기관",
-      },
-    ],
-
-    // 장기요양인정 신청안내 (Prototype 2)
+    // 장기요양인정 신청안내
     applicationInfo: [
       {
         label: "장기요양인정의 신청자격",
