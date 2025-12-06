@@ -1,0 +1,686 @@
+{
+  "projectInfo": {
+    "name": "우리재가노인복지센터 (Woori Home Elderly Care Center)",
+    "description": "Design system for Woori Home Elderly Care Center website",
+    "version": "1.0.0",
+    "framework": "React 19 + TypeScript + Tailwind CSS 4 + Motion",
+    "lastUpdated": "2025-01-19"
+  },
+
+  "colors": {
+    "description": "Color palette based on CSS custom properties defined in theme.css",
+    "primary": {
+      "DEFAULT": "#de895f",
+      "dark": "#763f18",
+      "light": "rgba(100, 180, 183, 0.4)",
+      "usage": "Main brand color, buttons, accents, active states"
+    },
+    "black": {
+      "DEFAULT": "#323133",
+      "light": "#434a54",
+      "usage": "Primary text, headings"
+    },
+    "gray": {
+      "DEFAULT": "#ccd1d9",
+      "dark": "#656d78",
+      "usage": "Secondary text, borders, backgrounds"
+    },
+    "white": {
+      "DEFAULT": "#fafafa",
+      "light": "#e6e9ed",
+      "usage": "Backgrounds, cards, modals"
+    },
+    "semantic": {
+      "red": {
+        "DEFAULT": "#da4453",
+        "light": "#ed5565",
+        "usage": "Errors, warnings"
+      },
+      "yellow": {
+        "DEFAULT": "#ffce54",
+        "usage": "Cautions, highlights"
+      },
+      "green": {
+        "DEFAULT": "#a0d468",
+        "dark": "#8cc152",
+        "usage": "Success, confirmations"
+      }
+    },
+    "transparent": {
+      "10": "#23232310",
+      "30": "#23232330",
+      "50": "#23232350",
+      "70": "#23232370",
+      "90": "#23232390",
+      "usage": "Overlays, modal backgrounds, hover states"
+    },
+    "background": {
+      "body": "#f5efe6",
+      "usage": "Main page background color"
+    }
+  },
+
+  "typography": {
+    "description": "Typography system with Pretendard font family",
+    "fontFamily": {
+      "primary": "var(--font-pretendard)",
+      "fallback": "\"Pretendard Variable\", \"Pretendard\", \"-apple-system\", \"BlinkMacSystemFont\", system-ui, \"Roboto\", \"Helvetica Neue\", \"Segoe UI\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif"
+    },
+    "baseFontSize": {
+      "html": "62.5%",
+      "description": "10px = 1rem for easier rem calculations"
+    },
+    "fontSizes": {
+      "xs": "1.3rem",
+      "sm": "1.4rem",
+      "base": "1.6rem",
+      "lg": "1.8rem",
+      "xl": "2rem",
+      "2xl": "2.2rem",
+      "3xl": "2.4rem",
+      "4xl": "2.6rem",
+      "5xl": "3.6rem",
+      "6xl": "4.8rem"
+    },
+    "fontWeights": {
+      "medium": "500",
+      "semibold": "600",
+      "bold": "700"
+    },
+    "lineHeights": {
+      "tight": "1.6",
+      "normal": "1.7",
+      "relaxed": "1.8"
+    },
+    "letterSpacing": {
+      "normal": "0.12rem",
+      "wide": "0.2em"
+    }
+  },
+
+  "spacing": {
+    "description": "Spacing scale used throughout the application",
+    "scale": {
+      "xs": "0.4rem",
+      "sm": "0.8rem",
+      "md": "1.6rem",
+      "lg": "2rem",
+      "xl": "2.4rem",
+      "2xl": "3rem",
+      "3xl": "3.2rem",
+      "4xl": "4rem",
+      "5xl": "4.8rem",
+      "6xl": "6.4rem"
+    },
+    "commonPatterns": {
+      "sectionPadding": "py-[6rem] px-[2rem]",
+      "cardPadding": "p-[3rem] ~ p-[4rem]",
+      "buttonPadding": "p-[1.2rem]",
+      "modalPadding": "p-[1rem]",
+      "gap": {
+        "small": "gap-[0.8rem]",
+        "medium": "gap-[2rem]",
+        "large": "gap-[4rem]"
+      }
+    }
+  },
+
+  "layout": {
+    "description": "Layout constraints and breakpoints",
+    "containerMaxWidths": {
+      "sm": "80rem",
+      "md": "100rem",
+      "lg": "120rem",
+      "usage": "Max width for content containers"
+    },
+    "breakpoints": {
+      "mobile": "640px",
+      "tablet": "1024px",
+      "description": "Responsive breakpoints defined in theme.css"
+    },
+    "heights": {
+      "navbar": "8rem",
+      "tableRow": "4.4rem",
+      "dropdownItem": "4rem"
+    }
+  },
+
+  "borderRadius": {
+    "description": "Border radius values for rounded corners",
+    "scale": {
+      "sm": "0.4rem",
+      "DEFAULT": "0.8rem",
+      "md": "1rem",
+      "lg": "1.2rem",
+      "xl": "1.6rem",
+      "full": "100%"
+    },
+    "usage": {
+      "button": "0.8rem",
+      "card": "1.2rem ~ 1.6rem",
+      "table": "0.8rem",
+      "modal": "0.8rem",
+      "dropdown": "0.4rem",
+      "hero": "1.6rem"
+    }
+  },
+
+  "shadows": {
+    "description": "Box shadow values",
+    "values": {
+      "normal": "0 0 1rem 0 rgba(0, 0, 0, 0.1)",
+      "table": "0 2px 8px rgba(0, 0, 0, 0.1)",
+      "sm": "shadow-sm",
+      "md": "shadow-md",
+      "lg": "shadow-lg",
+      "xl": "shadow-xl"
+    },
+    "usage": {
+      "card": "shadow-md (default), hover:shadow-xl",
+      "modal": "var(--shadow-normal)",
+      "dropdown": "var(--shadow-normal)",
+      "table": "0_2px_8px_rgba(0,0,0,0.1)"
+    }
+  },
+
+  "transitions": {
+    "description": "Transition timing and easing",
+    "duration": {
+      "fast": "0.3s",
+      "normal": "0.5s",
+      "slow": "0.6s"
+    },
+    "easing": {
+      "DEFAULT": "easeOut",
+      "spring": "{ type: 'spring', stiffness: 260, damping: 20 }"
+    },
+    "cssVariable": "var(--transition-normal)",
+    "commonPatterns": {
+      "colorTransition": "transition-colors duration-300",
+      "allTransition": "transition-all duration-[var(--transition-normal)]",
+      "shadowTransition": "transition-shadow"
+    }
+  },
+
+  "animations": {
+    "description": "Animation keyframes and configurations",
+    "keyframes": {
+      "skeleton": {
+        "description": "Skeleton loading animation",
+        "duration": "2s",
+        "timing": "infinite linear",
+        "keyframes": {
+          "0%": "transform: translateX(-100%)",
+          "50%, 100%": "transform: translateX(100%)"
+        }
+      },
+      "loading_spinner": {
+        "description": "Loading spinner rotation",
+        "duration": "1s",
+        "timing": "infinite ease",
+        "keyframes": {
+          "from": "transform: rotate(0turn)",
+          "to": "transform: rotate(1turn)"
+        }
+      },
+      "shimmer": {
+        "description": "Shimmer effect",
+        "duration": "2s",
+        "timing": "infinite",
+        "keyframes": {
+          "0%": "background-position: -200% 0",
+          "100%": "background-position: 200% 0"
+        }
+      },
+      "fade-in": {
+        "description": "Fade in animation",
+        "duration": "0.3s",
+        "timing": "ease-out",
+        "keyframes": {
+          "from": "opacity: 0",
+          "to": "opacity: 1"
+        }
+      },
+      "slide-up": {
+        "description": "Slide up animation",
+        "duration": "0.3s",
+        "timing": "ease-out",
+        "keyframes": {
+          "from": "opacity: 0, transform: translateY(20px)",
+          "to": "opacity: 1, transform: translateY(0)"
+        }
+      }
+    },
+    "motionVariants": {
+      "pageTransition": {
+        "description": "Page route transition",
+        "initial": { "opacity": 0, "x": 20 },
+        "animate": { "opacity": 1, "x": 0 },
+        "exit": { "opacity": 0, "x": -20 },
+        "transition": { "duration": 0.3, "ease": "easeOut" }
+      },
+      "scrollAnimation": {
+        "fade": {
+          "hidden": { "opacity": 0 },
+          "visible": { "opacity": 1 }
+        },
+        "slide": {
+          "hidden": { "opacity": 0, "y": 30 },
+          "visible": { "opacity": 1, "y": 0 }
+        },
+        "scale": {
+          "hidden": { "opacity": 0, "scale": 0.9 },
+          "visible": { "opacity": 1, "scale": 1 }
+        },
+        "stagger": {
+          "hidden": { "opacity": 0, "y": 20 },
+          "visible": { "opacity": 1, "y": 0 }
+        },
+        "transition": { "duration": 0.5, "ease": "easeOut" }
+      },
+      "modalAnimation": {
+        "background": {
+          "close": { "opacity": 0 },
+          "show": { "opacity": 1 }
+        },
+        "modal": {
+          "close": { "opacity": 0, "scale": 0 },
+          "show": { "opacity": 1, "scale": 1 }
+        }
+      },
+      "dropdownAnimation": {
+        "initial": { "opacity": 0, "y": -10 },
+        "animate": { "opacity": 1, "y": 1 },
+        "exit": { "opacity": 0, "y": -10 },
+        "transition": { "duration": 0.3 }
+      },
+      "heroAnimation": {
+        "title": {
+          "initial": { "opacity": 0, "y": 20 },
+          "animate": { "opacity": 1, "y": 0 },
+          "transition": { "duration": 0.6 }
+        },
+        "subtitle": {
+          "initial": { "opacity": 0, "y": 20 },
+          "animate": { "opacity": 1, "y": 0 },
+          "transition": { "duration": 0.6, "delay": 0.2 }
+        }
+      }
+    }
+  },
+
+  "motionEffects": {
+    "description": "Common motion interaction effects",
+    "hover": {
+      "scale": {
+        "small": "{ scale: 1.02 }",
+        "medium": "{ scale: 1.05 }",
+        "description": "For buttons and interactive elements"
+      },
+      "opacity": "{ opacity: 0.4 }"
+    },
+    "tap": {
+      "scale": {
+        "small": "{ scale: 0.98 }",
+        "medium": "{ scale: 0.95 }",
+        "large": "{ scale: 1.2 }",
+        "description": "For button press feedback"
+      }
+    },
+    "commonPatterns": {
+      "button": {
+        "whileHover": "{ scale: 1.05 }",
+        "whileTap": "{ scale: 0.95 }"
+      },
+      "menuItem": {
+        "whileHover": "{ scale: 1.02 }",
+        "whileTap": "{ scale: 0.98 }"
+      },
+      "closeIcon": {
+        "whileTap": "{ scale: 1.2 }",
+        "whileHover": "{ opacity: 0.4 }"
+      }
+    }
+  },
+
+  "zIndex": {
+    "description": "Z-index layering system",
+    "modal": 500,
+    "dropdown": "var(--z-index-modal)",
+    "navbar": "auto"
+  },
+
+  "opacity": {
+    "description": "Opacity values from CSS variables",
+    "low": 0.3,
+    "normal": 0.5,
+    "high": 0.7,
+    "link": 0.8
+  },
+
+  "components": {
+    "description": "Reusable component patterns and styling conventions",
+
+    "button": {
+      "description": "Button component variants",
+      "variants": {
+        "primary": {
+          "className": "bg-primary text-white p-[1.2rem] text-[1.4rem] font-[700] rounded-[0.8rem] cursor-pointer",
+          "motion": {
+            "whileHover": "{ scale: 1.05 }",
+            "whileTap": "{ scale: 0.95 }"
+          },
+          "usage": "Main call-to-action buttons"
+        },
+        "secondary": {
+          "className": "bg-gray-600 text-white p-[1.2rem] text-[1.4rem] font-[700] rounded-[0.8rem] cursor-pointer",
+          "motion": {
+            "whileHover": "{ scale: 1.05 }",
+            "whileTap": "{ scale: 0.95 }"
+          },
+          "usage": "Secondary actions"
+        },
+        "outline": {
+          "className": "border-2 border-gray-300 text-gray-700 p-[1rem] text-[1.4rem] font-[700] rounded-[0.8rem] cursor-pointer hover:bg-gray-50",
+          "motion": {
+            "whileHover": "{ scale: 1.05 }",
+            "whileTap": "{ scale: 0.95 }"
+          },
+          "usage": "Tertiary actions, cancel buttons"
+        }
+      }
+    },
+
+    "table": {
+      "description": "SimpleInfoTable component pattern",
+      "container": {
+        "className": "w-full rounded-[0.8rem] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.1)]",
+        "maxWidth": "60rem ~ 80rem"
+      },
+      "headerCell": {
+        "className": "h-[4.4rem] bg-primary text-white text-[1.4rem] font-[600] text-center border-r-[0.1rem] border-r-white/20",
+        "labelWidth": "16rem ~ 20rem"
+      },
+      "dataCell": {
+        "className": "h-[4.4rem] text-[1.4rem] font-[500] text-center bg-white"
+      },
+      "row": {
+        "className": "w-full border-b-[0.1rem] border-b-gray-200 last:border-b-0"
+      }
+    },
+
+    "card": {
+      "description": "Card component patterns",
+      "variants": {
+        "default": {
+          "className": "p-[3rem] bg-white rounded-[1.2rem] shadow-md hover:shadow-lg transition-shadow border-[0.1rem] border-gray-200"
+        },
+        "gradient": {
+          "className": "p-[3rem] bg-gradient-to-br from-white to-gray-50 rounded-[1.2rem] shadow-md hover:shadow-lg transition-shadow border-[0.1rem] border-gray-200"
+        },
+        "large": {
+          "className": "p-[4rem] bg-white rounded-[1.6rem] shadow-lg hover:shadow-xl transition-shadow"
+        }
+      },
+      "commonPatterns": {
+        "title": "text-[2.2rem] ~ text-[2.4rem] font-[700] text-primary mb-[1.6rem] ~ mb-[2rem]",
+        "description": "text-[1.6rem] ~ text-[2rem] leading-[1.7] text-gray-700 ~ text-gray-800 break-keep"
+      }
+    },
+
+    "section": {
+      "description": "ContentSection component pattern",
+      "container": {
+        "className": "w-full py-[6rem] px-[2rem] flex flex-col items-center gap-[4rem]",
+        "maxWidth": "80rem ~ 100rem"
+      },
+      "title": {
+        "component": "ArticleTitle",
+        "className": "w-full h-[4rem] flex items-center justify-center gap-[0.8rem] text-[2.6rem] font-[700] select-none"
+      },
+      "content": {
+        "className": "w-full flex flex-col items-center"
+      }
+    },
+
+    "hero": {
+      "description": "PageHero component pattern",
+      "container": {
+        "className": "w-full flex flex-col items-center justify-center py-[4rem] px-[2rem]"
+      },
+      "imageWrapper": {
+        "className": "w-[80%] max-[1000px]:w-full relative rounded-[1.6rem] overflow-hidden"
+      },
+      "title": {
+        "withImage": "text-[4.8rem] max-mobile:text-[3.6rem] font-[700] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] break-keep",
+        "withoutImage": "text-[4.8rem] max-mobile:text-[3.6rem] font-[700] text-primary break-keep text-center"
+      },
+      "subtitle": {
+        "withImage": "text-[2rem] max-mobile:text-[1.6rem] font-[500] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] break-keep",
+        "withoutImage": "text-[2rem] max-mobile:text-[1.6rem] font-[500] text-black break-keep text-center mt-[2rem]"
+      },
+      "overlay": {
+        "imageFilter": "filter: brightness(0.7)",
+        "gradient": "bg-gradient-to-b from-black/50 via-black/40 to-black/50"
+      },
+      "gradientBackground": "bg-gradient-to-br from-primary/20 via-primary/10 to-transparent p-[6rem]"
+    },
+
+    "navbar": {
+      "description": "Navbar component pattern",
+      "container": {
+        "height": "8rem",
+        "className": "w-full flex flex-col border-b-[0.1rem] border-b-primary"
+      },
+      "banner": {
+        "logo": "w-[8rem] h-[8rem] object-contain",
+        "title": "text-primary text-[2.2rem] font-bold",
+        "subtitle": "text-[1.6rem] leading-[1.6rem] font-bold"
+      },
+      "menuItem": {
+        "className": "w-full h-full flex justify-center items-center font-[600] text-[1.6rem] text-black tracking-[0.12rem] transition-all duration-[var(--transition-normal)]",
+        "active": "bg-primary text-white font-[700]",
+        "hover": "hover:bg-primary/20",
+        "motion": {
+          "whileHover": "{ scale: 1.02 }",
+          "whileTap": "{ scale: 0.98 }"
+        }
+      },
+      "dropdown": {
+        "container": "absolute top-full left-0 w-full bg-white shadow-[var(--shadow-normal)] rounded-[0.4rem] overflow-hidden z-[var(--z-index-modal)]",
+        "item": "w-full h-[4rem] flex items-center justify-center text-[1.4rem] font-[500] text-black transition-all duration-[var(--transition-normal)] hover:bg-primary/20",
+        "itemActive": "bg-primary text-white font-[600] hover:bg-primary",
+        "animation": {
+          "initial": "{ opacity: 0, y: -10 }",
+          "animate": "{ opacity: 1, y: 1 }",
+          "exit": "{ opacity: 0, y: -10 }",
+          "transition": "{ duration: 0.3 }"
+        }
+      },
+      "hamburger": {
+        "className": "w-[4rem] h-[4rem] flex flex-col items-center justify-center gap-[0.6rem] lg:hidden",
+        "bar": "w-[2.8rem] h-[0.3rem] bg-black rounded-full transition-transform duration-300"
+      }
+    },
+
+    "modal": {
+      "description": "Modal component pattern",
+      "background": {
+        "className": "w-full h-full flex items-center justify-center fixed top-0 left-0 bg-transparent_90 overflow-auto z-modal",
+        "animation": {
+          "close": "{ opacity: 0 }",
+          "show": "{ opacity: 1 }"
+        }
+      },
+      "content": {
+        "className": "min-h-[4rem] min-w-[4rem] p-[1rem] flex justify-end relative bg-white rounded-[0.8rem]",
+        "withCloseIcon": "pt-[3.2rem]",
+        "animation": {
+          "close": "{ opacity: 0, scale: 0 }",
+          "show": "{ opacity: 1, scale: 1 }"
+        }
+      },
+      "closeIcon": {
+        "className": "w-[2rem] h-[2rem] absolute top-[0.6rem] cursor-pointer select-none",
+        "motion": {
+          "whileTap": "{ scale: 1.2 }",
+          "whileHover": "{ opacity: 0.4 }"
+        }
+      }
+    },
+
+    "loadingSpinner": {
+      "description": "Loading spinner component",
+      "container": {
+        "className": "w-full h-full relative",
+        "size": "configurable (default: 100%)"
+      },
+      "spinner": {
+        "className": "w-full h-full rounded-[100%] border-transparent border-t-primary",
+        "borderWidth": "0.6rem",
+        "animation": "loading_spinner 1s infinite ease"
+      }
+    },
+
+    "link": {
+      "description": "Link component patterns",
+      "footer": {
+        "className": "text-[1.4rem] opacity-80 max-mobile:text-[1.3rem] transition-colors duration-300 hover:text-black focus:text-primary focus:outline-none"
+      },
+      "breadcrumb": {
+        "default": "text-gray-600 hover:text-primary transition-colors",
+        "active": "text-primary font-[600]",
+        "separator": "text-gray-400"
+      }
+    },
+
+    "breadcrumb": {
+      "description": "Breadcrumb navigation pattern",
+      "container": {
+        "className": "w-full py-[2rem] px-[2rem] flex items-center gap-[0.8rem] text-[1.4rem]"
+      },
+      "item": {
+        "link": "text-gray-600 hover:text-primary transition-colors",
+        "active": "text-primary font-[600]"
+      },
+      "separator": "text-gray-400"
+    },
+
+    "grid": {
+      "description": "Common grid patterns",
+      "twoColumn": {
+        "className": "w-full max-w-[100rem] grid grid-cols-1 md:grid-cols-2 gap-[2.4rem] ~ gap-[3rem] px-[2rem]"
+      }
+    },
+
+    "timeline": {
+      "description": "Timeline component pattern (History)",
+      "container": "w-full max-w-[80rem] px-[2rem]",
+      "line": "absolute left-[2rem] top-0 bottom-0 w-[0.2rem] bg-primary/30",
+      "item": "relative flex items-start gap-[2rem] pl-[5rem]",
+      "dot": "absolute left-0 w-[1.6rem] h-[1.6rem] rounded-[100%] bg-primary"
+    }
+  },
+
+  "utilities": {
+    "description": "Common utility classes and patterns",
+    "textUtilities": {
+      "breakKeep": "break-keep",
+      "textCenter": "text-center",
+      "selectNone": "select-none",
+      "pointerEventsNone": "pointer-events-none"
+    },
+    "visualUtilities": {
+      "cursorPointer": "cursor-pointer",
+      "objectContain": "object-contain",
+      "objectCover": "object-cover",
+      "overflowHidden": "overflow-hidden",
+      "overflowAuto": "overflow-auto"
+    },
+    "focusVisible": {
+      "outline": "outline: 2px solid var(--color-primary), outline-offset: 2px",
+      "ring": "focus-visible:ring-2 focus-visible:ring-primary"
+    },
+    "responsivePatterns": {
+      "mobile": "max-mobile:...",
+      "maxWidth": "max-[1000px]:..."
+    }
+  },
+
+  "accessibility": {
+    "description": "Accessibility patterns used in the project",
+    "focusVisible": {
+      "global": "*:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }"
+    },
+    "reducedMotion": {
+      "mediaQuery": "@media (prefers-reduced-motion: reduce)",
+      "override": "animation-duration: 0.01ms !important, transition-duration: 0.01ms !important"
+    },
+    "ariaLabels": {
+      "hamburgerMenu": "aria-label: 메뉴 열기/닫기",
+      "ariaExpanded": "aria-expanded: true/false",
+      "ariaControls": "aria-controls: mobile-menu"
+    }
+  },
+
+  "cssVariables": {
+    "description": "CSS custom properties reference from theme.css",
+    "reference": {
+      "color": "var(--color-*)",
+      "font": "var(--font-pretendard)",
+      "transition": "var(--transition-normal)",
+      "opacity": "var(--opacity-*)",
+      "zIndex": "var(--z-index-modal)",
+      "shadow": "var(--shadow-normal)",
+      "animation": "var(--animation-*)",
+      "breakpoint": "var(--breakpoint-*)"
+    }
+  },
+
+  "bestPractices": {
+    "description": "Development guidelines and best practices",
+    "styling": [
+      "Use Tailwind utility classes for styling",
+      "Use CSS variables for theme values (colors, transitions, etc.)",
+      "Use rem units for consistent sizing (base: 62.5% = 10px)",
+      "Apply max-mobile: prefix for mobile-specific styles",
+      "Use twMerge for conditional className merging"
+    ],
+    "animations": [
+      "Use Motion library for animations (not CSS animations)",
+      "Apply motion.div/section/article for animated components",
+      "Use predefined variants from design system",
+      "Include transition prop with duration and easing",
+      "Respect prefers-reduced-motion for accessibility"
+    ],
+    "components": [
+      "Follow 3-tier structure: Page > Container > Component",
+      "Separate business logic into Custom Hooks",
+      "Use Barrel exports (index.ts) for all folders",
+      "Apply consistent naming: ComponentName.tsx, ComponentName.type.ts",
+      "Use motion effects for interactive elements (whileHover, whileTap)"
+    ],
+    "responsive": [
+      "Mobile-first approach with max-mobile: breakpoint",
+      "Container max-widths: 80rem, 100rem, 120rem",
+      "Use percentage widths with max-width constraints",
+      "Test at mobile (< 640px), tablet (1024px), desktop"
+    ]
+  },
+
+  "examples": {
+    "description": "Code examples for common patterns",
+    "button": {
+      "code": "<motion.button\n  whileHover={{ scale: 1.05 }}\n  whileTap={{ scale: 0.95 }}\n  className=\"bg-primary text-white p-[1.2rem] text-[1.4rem] font-[700] rounded-[0.8rem] cursor-pointer\"\n>\n  Button Text\n</motion.button>"
+    },
+    "card": {
+      "code": "<motion.div\n  ref={ref}\n  initial=\"hidden\"\n  animate={isInView ? \"visible\" : \"hidden\"}\n  variants={variants}\n  transition={transition}\n  className=\"p-[3rem] bg-white rounded-[1.2rem] shadow-md hover:shadow-lg transition-shadow\"\n>\n  Card Content\n</motion.div>"
+    },
+    "section": {
+      "code": "<ContentSection title=\"Section Title\" maxWidth=\"100rem\">\n  {children}\n</ContentSection>"
+    },
+    "pageTransition": {
+      "code": "const { pageVariants, pageTransition } = usePageTransition();\n\n<motion.section\n  initial=\"initial\"\n  animate=\"animate\"\n  exit=\"exit\"\n  variants={pageVariants}\n  transition={pageTransition}\n>\n  {children}\n</motion.section>"
+    }
+  }
+}
