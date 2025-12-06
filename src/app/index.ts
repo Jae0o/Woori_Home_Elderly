@@ -5,6 +5,7 @@ export { InsurancePage } from "./Service/InsurancePage";
 export { HomeCarePage } from "./Service/HomeCarePage";
 
 export { GuidePage } from "./CostAndContact/GuidePage";
+export { CostPage } from "./CostAndContact/CostPage";
 
 export { SponsorAndVolunteerPage } from "./SponsorAndVolunteer/SponsorAndVolunteerPage";
 

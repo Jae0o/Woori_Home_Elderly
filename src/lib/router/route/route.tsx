@@ -1,6 +1,7 @@
 import { Navigate, createBrowserRouter } from "react-router";
 
 import {
+  CostPage,
   DirectionsPage,
   GreetingPage,
   GuidePage,
@@ -72,6 +73,11 @@ const route = createBrowserRouter([
       {
         path: ROUTE_PATH.COST_AND_CONTACT_GUIDE,
         element: <GuidePage />,
+      },
+
+      {
+        path: ROUTE_PATH.COST_AND_CONTACT_COST,
+        element: <CostPage />,
       },
 
       {

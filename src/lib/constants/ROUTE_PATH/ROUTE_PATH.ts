@@ -5,6 +5,7 @@ const ROUTE_PATH = {
   SERVICE_INSURANCE: "/service/insurance",
   SERVICE_HOME_CARE: "/service/home-care",
   COST_AND_CONTACT_GUIDE: "/cost-and-contact/guide",
+  COST_AND_CONTACT_COST: "/cost-and-contact/cost",
   COST_AND_CONTACT_CONSULT: "/cost-and-contact/consult",
   SPONSOR_AND_VOLUNTEER: "/sponsor-and-volunteer",
 } as const;
