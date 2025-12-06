@@ -1,4 +1,5 @@
 export { FooterLogo } from "./FooterLogo";
+export { FooterPartners } from "./FooterPartners";
 export { FooterNavigation } from "./FooterNavigation";
 export { FooterNavSection } from "./FooterNavSection";
 export { FooterNavLink } from "./FooterNavLink";

@@ -1,9 +1,17 @@
 import { COMPANY_INFO } from "@lib/constants";
 
-import { FooterContact, FooterCopyright, FooterLogo, FooterNavigation } from "./components";
+import { FooterContact, FooterCopyright, FooterLogo, FooterNavigation, FooterPartners } from "./components";
 import { FOOTER_CONTENT } from "./constants";
 
 import { twMerge } from "tailwind-merge";
+
+const PARTNER_LOGOS = [
+  {
+    name: "노인장기요양보험",
+    src: "/long-term-care-insurance.png",
+    url: "https://www.longtermcare.or.kr",
+  },
+];
 
 const Footer = () => {
   return (
@@ -14,11 +22,14 @@ const Footer = () => {
           "max-mobile:py-[4.8rem] max-mobile:gap-[3.2rem]",
         )}
       >
-        {/* Logo Section */}
-        <FooterLogo
-          title={FOOTER_CONTENT.LOGO.title}
-          description={FOOTER_CONTENT.LOGO.description}
-        />
+        {/* Logo + Partners Section */}
+        <div className="flex items-center justify-between gap-[2rem] flex-wrap">
+          <FooterLogo
+            title={FOOTER_CONTENT.LOGO.title}
+            description={FOOTER_CONTENT.LOGO.description}
+          />
+          <FooterPartners logos={PARTNER_LOGOS} />
+        </div>
 
         {/* Quick Links Section */}
         <FooterNavigation />
