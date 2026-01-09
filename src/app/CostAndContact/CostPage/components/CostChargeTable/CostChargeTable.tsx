@@ -27,7 +27,7 @@ const CostChargeTable = ({ data }: CostChargeTableProps) => {
                 구분
               </th>
               <th className="px-[1.6rem] py-[1.4rem] text-[1.5rem] font-[700] text-center border-r-[0.1rem] border-r-white/20">
-                급여(원)
+                수가(원)
               </th>
               <th className="px-[1.6rem] py-[1.4rem] text-[1.5rem] font-[700] text-center border-r-[0.1rem] border-r-white/20">
                 본인부담금(15%)
@@ -117,6 +117,10 @@ const CostChargeTable = ({ data }: CostChargeTableProps) => {
           </tbody>
         </table>
       </div>
+
+      <p className="text-[1.3rem] max-mobile:text-[1.2rem] text-gray-600 leading-[1.6] break-keep mt-[0.8rem]">
+        {data.note}
+      </p>
 
       <p className="text-[1.3rem] max-mobile:text-[1.2rem] text-gray-600 leading-[1.6] break-keep mt-[0.8rem]">
         {data.footer}

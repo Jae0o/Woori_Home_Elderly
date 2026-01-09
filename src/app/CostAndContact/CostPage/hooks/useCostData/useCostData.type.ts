@@ -17,6 +17,7 @@ export interface CostChargeTableData {
   title: string;
   columns: string[];
   rows: CostChargeRow[];
+  note: string;
   footer: string;
 }
 
