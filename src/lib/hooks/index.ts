@@ -3,3 +3,4 @@ export { default as useMobileMenu } from "./useMobileMenu/useMobileMenu";
 export { default as useModal } from "./useModal/useModal";
 export { default as usePageTransition } from "./usePageTransition/usePageTransition";
 export { default as useScrollAnimation } from "./useScrollAnimation/useScrollAnimation";
+export { default as useScrollToTop } from "./useScrollToTop/useScrollToTop";
